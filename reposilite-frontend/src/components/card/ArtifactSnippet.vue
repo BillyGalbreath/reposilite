@@ -46,10 +46,10 @@ defineExpose({ content })
 </XmlTag>
 </pre>
 <pre v-else-if="configuration.lang === 'groovy'" ref="preElement">
-implementation <CodeString>{{ `${data.groupId}:${data.artifactId}:${data.version}` }}</CodeString>
+compileOnly <CodeString>{{ `${data.groupId}:${data.artifactId}:${data.version}` }}</CodeString>
 </pre>
 <pre v-else-if="configuration.lang === 'kotlin'" ref="preElement">
-implementation<CodeBrackets start="(" end=")"><CodeString>{{ `${data.groupId}:${data.artifactId}:${data.version}` }}</CodeString></CodeBrackets>
+compileOnly<CodeBrackets start="(" end=")"><CodeString>{{ `${data.groupId}:${data.artifactId}:${data.version}` }}</CodeString></CodeBrackets>
 </pre>
 <pre v-else-if="configuration.lang === 'scala'" ref="preElement">
 <CodeString>{{data.groupId}}</CodeString> %% <CodeString>{{data.artifactId}}</CodeString> %% <CodeString>{{data.version}}</CodeString>
